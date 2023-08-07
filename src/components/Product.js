@@ -18,7 +18,16 @@ function Product({ id, title, price, description, category, image }) {
   const [hasPrime] = useState(Math.random() < 0.5);
 
   const addItemToBasket = () => {
-    const product = { id, title, price, description, category, image };
+    const product = {
+      id,
+      title,
+      price,
+      description,
+      category,
+      image,
+      hasPrime,
+      rating,
+    };
 
     dispatch(addToBasket(product));
   };
@@ -49,7 +58,11 @@ function Product({ id, title, price, description, category, image }) {
 
       {hasPrime && (
         <div className="flex items-center space-x-2 -mt-5">
-          <img className="w-12" src="https://links.papareact.com/fdw" alt="" />
+          <img
+            className="w-12"
+            src="https://mundoconectado.com.br/uploads/chamadas/logo-amazon-prime-imagem-reproducao-amazon.jpg"
+            alt=""
+          />
           <p className="text-xs text-gray-500">FREE Next-day Delivery</p>
         </div>
       )}

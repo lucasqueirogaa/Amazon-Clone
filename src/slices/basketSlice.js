@@ -11,7 +11,22 @@ export const basketSlice = createSlice({
     addToBasket: (state, action) => {
       state.items = [...state.items, action.payload];
     },
-    removeFromBasket: (state, action) => {},
+    removeFromBasket: (state, action) => {
+      const index = state.items.findIndex(
+        (basketItem) => basketItem.id === action.payload.id
+      );
+      console.log({ index });
+      let newBasket = [...state.items];
+
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+        // console.log({ newBasket });
+      } else {
+        console.warn("Can't remove the item from basket");
+      }
+
+      state.items = newBasket;
+    },
   },
 });
 
