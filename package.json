@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "v1",
@@ -28,6 +29,9 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "eslint": "^8.46.0",
+    "eslint-config-next": "13.4.13",
+    "eslint-plugin-react": "^7.33.1",
     "postcss": "^8.2.15",
     "tailwindcss": "^2.1.2"
   }

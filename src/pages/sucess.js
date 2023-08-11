@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import { CheckCircleIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 
-function sucess() {
+function Sucess() {
   const router = useRouter();
 
   return (
@@ -43,4 +43,4 @@ function sucess() {
   );
 }
 
-export default sucess;
+export default Sucess;

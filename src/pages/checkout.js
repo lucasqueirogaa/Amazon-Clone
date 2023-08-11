@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Head from "next/dist/next-server/lib/head";
+import Head from "next/head";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import { selectItems, selectTotal } from "../slices/basketSlice";
@@ -47,6 +47,7 @@ function Checkout() {
             width={1024}
             height={250}
             objectFit="contain"
+            alt=""
           />
 
           <div className="flex flex-col p-5 space-y-10 bg-white">
