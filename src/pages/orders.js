@@ -4,7 +4,7 @@ import { getSession, useSession } from "next-auth/react";
 import Head from "next/head";
 import moment from "moment";
 import db from "../../firebase";
-import Order from "../components/order";
+import Order from "../components/Order";
 
 function Orders({ orders }) {
   const { data } = useSession();
@@ -22,7 +22,7 @@ function Orders({ orders }) {
           </h1>
 
           {data ? (
-            <h2>x Orders</h2>
+            <h2>{orders.length} Orders</h2>
           ) : (
             <h2>Please, sign in to see your orders</h2>
           )}
